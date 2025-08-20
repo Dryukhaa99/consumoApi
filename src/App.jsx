@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import './App.css'
-import Autores from './componentes/Autores'
-// import Libros from './componentes/Libros'
+import Autores from './componentes/autores/Main'
+import Libros from './componentes/libros/Main'
+
+//https://api-libros.ctpoba.edu.ar/
 
 function App(){
+  
+
   return(
     <>
     <div className='App'>
-      <Autores/>
+      <Libros />
+      <Autores />
     </div>
     </>
   )
