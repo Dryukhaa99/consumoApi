@@ -46,6 +46,7 @@
   max-height: 100%;
   overflow-y: scroll;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .Tarjeta{
@@ -57,3 +58,6 @@
   flex-direction: column;
 }
 
+.Eliminar{
+  cursor: pointer;
+}

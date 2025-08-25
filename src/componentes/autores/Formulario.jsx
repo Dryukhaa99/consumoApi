@@ -1,25 +1,30 @@
 import { useState } from "react"
 
-export default function FormularioAutores(){
-    const [nombres, setNombres] = useState('');
-    const [apellidos, setApellidos] = useState('');
+export default function FormularioAutores({guardarAutor}){
+    const [nombre, setNombre] = useState('');
+    const [apellido, setApellido] = useState('');
 
     const guardar = (e)=>{
         e.preventDefault();
+        const autor = {
+            nombre,
+            apellido
+        }
+        guardarAutor(autor);
     }
     return(
         <div className="Formulario">
             <form className="FormContenedor" onSubmit={(e)=> guardar(e)}>
                 <input placeholder="Nombres" 
                 type="text"
-                value={nombres}
-                onChange={(e)=> setNombres(e.target.value)}
+                value={nombre}
+                onChange={(e)=> setNombre(e.target.value)}
                 />
                 
                 <input placeholder="Apellidos" 
                 type="text"
-                value={apellidos}
-                onChange={(e)=> setApellidos(e.target.value)}
+                value={apellido}
+                onChange={(e)=> setApellido(e.target.value)}
                 />
                 <button type="submit">Guardar</button>
             </form>
